@@ -1,0 +1,289 @@
+@import "mixin";
+@import "placeholder";
+@import "navbem";
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer; 
+}
+h2 {
+    color: black;
+    font-family: 'Libre Baskerville', serif;
+}
+
+h3{
+    color: #771E19;
+    font-family: 'Libre Baskerville', serif;
+}
+
+p {
+    color: black;
+    margin-bottom: 25px;
+}
+
+footer {
+    .foot{
+        display: flex;
+        flex-direction: column;
+        p {
+        align-self: center;
+        color: #771E19;
+        }
+    }
+    background-color: rgba(107, 107, 107, 0.473)
+}
+
+/* Index */
+.slider {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    animation: slide 20s infinite;
+}
+
+@keyframes slide {
+    
+    0% {background-image: url('../img/index/mercedez13.jpg');}
+    20% {background-image: url('../img/index/mercedez13.jpg');}
+
+    25% {background-image: url('../img/index/megafutbol.jpg');}
+    45% {background-image: url('../img/index/megafutbol.jpg');}
+
+    50% {background-image: url('../img/index/ferreteria.jpg');}
+    70% {background-image: url('../img/index/ferreteria.jpg');}
+
+    75% {background-image: url('../img/index/pizarra.jpg');}
+    100% {background-image: url('../img/index/pizarra.jpg');}
+}
+
+header ul{
+    display: flex;
+    justify-content: flex-end; 
+    
+    li{
+        margin-left: 10px;
+        display: inline-block     
+    }
+}
+
+header nav ul li{
+    font-size: 1.3rem;
+    font-weight: 500; 
+
+    a {
+    color: #fff;
+    border-bottom-color: #e84855;
+    border-bottom: 6px solid transparent;
+
+        &.active{
+        border-bottom-color: #e84855;
+        }
+    }
+} 
+
+
+
+.principal{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 100%);
+    position: absolute;
+    text-align: center;
+    padding: 5px;
+    border: ridge 5px black;
+    background-color: rgba(0, 0, 20, 0.8);
+    
+    p{
+    color:grey;
+    font-weight: 700 ;
+    }
+    
+    .principal1{
+        margin: 3px;
+        padding: 3px;
+        color: #771E19;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    
+    .parrafo{
+        margin-top: 5px;
+    }
+}
+
+.contenedorlink{
+    background-color: #771e193a;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: inline-block;
+
+    .link1{ 
+        margin-bottom: 5px;
+        color: #fff;
+        font-size: 1.3rem;
+        font-weight: 800;   
+    }
+    
+        &.contenedorlink:hover{
+            transform: scale(0.8);
+            background-color:#592b41b0;
+         }
+} 
+
+.marca {
+    display: flexbox;
+    justify-content: center;
+    align-content: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -75%);
+    position: absolute;
+    width: 40vh;
+}
+
+.marca2 {
+    width: 8vh;
+    position:relative;
+    top: 0%;
+    left: 0%;
+}
+
+  
+/*Nav 4 pag*/
+.indexmenu{
+    position: relative;
+    left: 385px;
+}
+
+
+/* Empresa */
+
+.empresa{
+    @extend %contenedorpages;
+    
+    div{
+        h3{
+            @extend %textoh3
+        }
+    }
+    img{
+        padding: 3px 5px;
+    }
+}
+
+
+/* Proyectos */
+
+.proyecto{
+    @extend %contenedorpages;
+    
+    div{
+        h3{
+            @extend %textoh3
+        }
+    }
+    img{
+        padding: 3px 3px;
+        overflow:hidden
+    }
+}
+ /* Contactos */
+ .contactos{
+    @extend .proyecto;  
+}
+
+/* Servicios */
+.servicios{
+    @extend %contenedorpages;
+
+    div{
+        h3{
+            @extend %textoh3
+        }
+    }
+}
+
+
+
+
+.mensaje{
+     display: flex;
+ }
+ 
+
+
+textarea , input{
+     margin: 0px 0px 0px 15px ;
+ }
+
+
+form {
+    font-size: 1rem;
+    background-color: grey
+    
+}
+
+
+/* Footer*/
+
+
+.foot{
+    display: flex;
+    flex-direction: column;
+    
+    p{
+        align-self: center;
+    }
+}
+
+/*Grilla galeria */
+.galeria{
+    margin: 5px;
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-template-rows: 200px;
+    grid-gap: 10px;
+    
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: 5px;
+    }
+}
+
+.contenedor3{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+
+    .boton{
+        font-size: 1.2rem;
+        align-self: center;
+        border-radius: 5px;
+        padding: 10px 20px 10px 20px;
+        margin-bottom: 20px;
+        background-color: #771e19c7;
+        color: #fff;
+    }
+}
+
+ 
+
